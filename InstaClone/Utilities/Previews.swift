@@ -43,4 +43,23 @@ struct UIViewPreview<View: UIView>: UIViewRepresentable {
     }
 }
 
+
+struct UIStackViewPreview<View: UIStackView>: UIViewRepresentable {
+    let view: View
+    
+    init(_ builder: @escaping () -> View) {
+        view = builder()
+    }
+    
+    // MARK: UIViewRepresentable
+    func makeUIView(context: Context) -> UIStackView {
+        return view
+    }
+    
+    func updateUIView(_ view: UIStackView, context: Context) {
+        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        view.setContentHuggingPriority(.defaultHigh, for: .vertical)
+    }
+}
+
 #endif

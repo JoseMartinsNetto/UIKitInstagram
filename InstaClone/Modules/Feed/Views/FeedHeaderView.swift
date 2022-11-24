@@ -9,18 +9,16 @@ import UIKit
 
 final class FeedHeaderView: UIStackView {
     
-    let logo: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "Logo")
-        imageView.tintColor = .white
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+    private let logo: UIImageView = {
+        let imageView = UIImageView(disableAutoResizing: true)
+        imageView.image = .logo
+        imageView.tintColor = .lightBlackDarkWhite
         
         return imageView
     }()
     
-    let iconsStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+    private let iconsStackView: UIStackView = {
+        let stackView = UIStackView(disableAutoResizing: true)
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
         stackView.spacing = 16
@@ -28,66 +26,40 @@ final class FeedHeaderView: UIStackView {
         return stackView
     }()
     
-    let shareButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "Icon-Add"), for: .normal)
-        button.tintColor = .white
-        
-        return button
-    }()
-    
-    let commentButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "Icon-Comment"), for: .normal)
-        button.tintColor = .white
-        
-        return button
-    }()
-    
-    let addButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "Icon-Share"), for: .normal)
-        button.tintColor = .white
-        
-        return button
-    }()
-    
-    var onClikShare: (() -> Void)?
-    var onClikAdd: (() -> Void)?
-    var onClikComment: (() -> Void)?
-    
-    @objc private func clickShare() {
-        self.onClikShare?()
-    }
-    
-    @objc private func clickComment() {
-        self.onClikComment?()
-    }
-    
-    @objc private func clickAdd() {
-        self.onClikAdd?()
-    }
+    @objc var onClikShare: (() -> Void) = {}
+    @objc var onClikAdd: (() -> Void) = {}
+    @objc var onClikComment: (() -> Void) = {}
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         self.axis = .horizontal
         self.distribution = .equalSpacing
         
-        self.addButton.addTarget(self, action: #selector(self.clickAdd), for: .touchUpInside)
-        self.commentButton.addTarget(self, action: #selector(self.clickComment), for: .touchUpInside)
-        self.shareButton.addTarget(self, action: #selector(self.clickShare), for: .touchUpInside)
+        let shareButton: UIButton = .iconButton(icon: .iconShare, iconColor: .lightBlackDarkWhite)
+        let commentButton: UIButton = .iconButton(icon: .iconComment, iconColor: .lightBlackDarkWhite)
+        let addButton: UIButton = .iconButton(icon: .iconAdd, iconColor: .lightBlackDarkWhite)
         
-        self.iconsStackView.addArrangedSubview(self.shareButton)
-        self.iconsStackView.addArrangedSubview(self.commentButton)
-        self.iconsStackView.addArrangedSubview(self.addButton)
+        addButton.addTarget(self, action: #selector(self.onAddClickEvent), for: .touchUpInside)
+        commentButton.addTarget(self, action: #selector(self.onCommentClickEvent), for: .touchUpInside)
+        shareButton.addTarget(self, action: #selector(self.onShareClickEvent), for: .touchUpInside)
+        
+        iconsStackView.addArrangedSubview(addButton)
+        iconsStackView.addArrangedSubview(commentButton)
+        iconsStackView.addArrangedSubview(shareButton)
         
         self.addArrangedSubview(self.logo)
         self.addArrangedSubview(self.iconsStackView)
-        
-        guard let superview = self.superview else { return }
-        
-        self.topAnchor.constraint(equalTo: superview.topAnchor, constant: 56).isActive = true
-        self.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 16).isActive = true
-        self.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -16).isActive = true
+    }
+    
+    @objc private func onAddClickEvent() {
+        self.onClikAdd()
+    }
+    
+    @objc private func onCommentClickEvent() {
+        self.onClikComment()
+    }
+    
+    @objc private func onShareClickEvent() {
+        self.onClikShare()
     }
 }

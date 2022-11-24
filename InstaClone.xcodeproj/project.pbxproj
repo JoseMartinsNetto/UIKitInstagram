@@ -14,7 +14,16 @@
 		7F21AE77292428E200940EE5 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F21AE76292428E200940EE5 /* FeedViewController.swift */; };
 		7F21AE7B29243E3400940EE5 /* FeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F21AE7A29243E3400940EE5 /* FeedHeaderView.swift */; };
 		7F21AE7D2924516600940EE5 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F21AE7C2924516600940EE5 /* PostView.swift */; };
+		7F4FF81F292D51BF00841D97 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FF81E292D51BF00841D97 /* TabbarViewController.swift */; };
 		7F55635F29254836009B39FA /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F55635E29254836009B39FA /* Previews.swift */; };
+		7F59227C292FBB0400F408EC /* Development Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F59227B292FBB0400F408EC /* Development Assets.xcassets */; };
+		7FDFC65729257715004D92D1 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFC65629257715004D92D1 /* UIButtonExtension.swift */; };
+		7FDFC659292577AD004D92D1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFC658292577AD004D92D1 /* UIViewExtension.swift */; };
+		7FDFC65B29257E2C004D92D1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFC65A29257E2C004D92D1 /* UIColorExtension.swift */; };
+		7FDFC65D292583CA004D92D1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFC65C292583CA004D92D1 /* UIImageExtension.swift */; };
+		7FE80F00292E9A860007D027 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE80EFF292E9A860007D027 /* UIStackViewExtension.swift */; };
+		7FE80F02292ED93F0007D027 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE80F01292ED93F0007D027 /* UICollectionViewExtension.swift */; };
+		7FE80F04292EDA020007D027 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE80F03292EDA020007D027 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +36,16 @@
 		7F21AE76292428E200940EE5 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7F21AE7A29243E3400940EE5 /* FeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderView.swift; sourceTree = "<group>"; };
 		7F21AE7C2924516600940EE5 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		7F4FF81E292D51BF00841D97 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		7F55635E29254836009B39FA /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
+		7F59227B292FBB0400F408EC /* Development Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Development Assets.xcassets"; sourceTree = "<group>"; };
+		7FDFC65629257715004D92D1 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		7FDFC658292577AD004D92D1 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		7FDFC65A29257E2C004D92D1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7FDFC65C292583CA004D92D1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		7FE80EFF292E9A860007D027 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
+		7FE80F01292ED93F0007D027 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		7FE80F03292EDA020007D027 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +78,8 @@
 		7F0344A529241680006AC84F /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
-				7F55635D29254813009B39FA /* Utilities */,
 				7F0344BA292416F6006AC84F /* Application */,
+				7F55635D29254813009B39FA /* Utilities */,
 				7F21AE75292428C200940EE5 /* Modules */,
 			);
 			path = InstaClone;
@@ -70,11 +88,12 @@
 		7F0344BA292416F6006AC84F /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				7F0344B429241682006AC84F /* Info.plist */,
+				7F0344AF29241682006AC84F /* Assets.xcassets */,
+				7F59227B292FBB0400F408EC /* Development Assets.xcassets */,
 				7F0344B129241682006AC84F /* LaunchScreen.storyboard */,
 				7F0344A629241680006AC84F /* AppDelegate.swift */,
 				7F0344A829241680006AC84F /* SceneDelegate.swift */,
-				7F0344AF29241682006AC84F /* Assets.xcassets */,
-				7F0344B429241682006AC84F /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -101,16 +120,48 @@
 			children = (
 				7F21AE7A29243E3400940EE5 /* FeedHeaderView.swift */,
 				7F21AE7C2924516600940EE5 /* PostView.swift */,
+				7FE80F03292EDA020007D027 /* PostCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7F4FF820292D51FE00841D97 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				7F4FF81E292D51BF00841D97 /* TabbarViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		7F4FF821292D526B00841D97 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F4FF820292D51FE00841D97 /* Tabbar */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		7F55635D29254813009B39FA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				7F4FF821292D526B00841D97 /* UI */,
+				7FDFC655292576FC004D92D1 /* Extensions */,
 				7F55635E29254836009B39FA /* Previews.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7FDFC655292576FC004D92D1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7FDFC65629257715004D92D1 /* UIButtonExtension.swift */,
+				7FDFC658292577AD004D92D1 /* UIViewExtension.swift */,
+				7FDFC65A29257E2C004D92D1 /* UIColorExtension.swift */,
+				7FDFC65C292583CA004D92D1 /* UIImageExtension.swift */,
+				7FE80EFF292E9A860007D027 /* UIStackViewExtension.swift */,
+				7FE80F01292ED93F0007D027 /* UICollectionViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +224,7 @@
 			files = (
 				7F0344B329241682006AC84F /* LaunchScreen.storyboard in Resources */,
 				7F0344B029241682006AC84F /* Assets.xcassets in Resources */,
+				7F59227C292FBB0400F408EC /* Development Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,10 +236,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F0344A729241680006AC84F /* AppDelegate.swift in Sources */,
+				7FE80F00292E9A860007D027 /* UIStackViewExtension.swift in Sources */,
 				7F21AE77292428E200940EE5 /* FeedViewController.swift in Sources */,
+				7FE80F02292ED93F0007D027 /* UICollectionViewExtension.swift in Sources */,
 				7F0344A929241680006AC84F /* SceneDelegate.swift in Sources */,
+				7F4FF81F292D51BF00841D97 /* TabbarViewController.swift in Sources */,
+				7FDFC65D292583CA004D92D1 /* UIImageExtension.swift in Sources */,
+				7FE80F04292EDA020007D027 /* PostCell.swift in Sources */,
 				7F21AE7D2924516600940EE5 /* PostView.swift in Sources */,
+				7FDFC65729257715004D92D1 /* UIButtonExtension.swift in Sources */,
+				7FDFC65B29257E2C004D92D1 /* UIColorExtension.swift in Sources */,
 				7F55635F29254836009B39FA /* Previews.swift in Sources */,
+				7FDFC659292577AD004D92D1 /* UIViewExtension.swift in Sources */,
 				7F21AE7B29243E3400940EE5 /* FeedHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "InstaClone/Application/Development\\ Assets.xcassets InstaClone/Utilities/Previews.swift";
 				DEVELOPMENT_TEAM = 35YSZ37LA7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaClone/Application/Info.plist;
@@ -355,6 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "InstaClone/Application/Development\\ Assets.xcassets InstaClone/Utilities/Previews.swift";
 				DEVELOPMENT_TEAM = 35YSZ37LA7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaClone/Application/Info.plist;
