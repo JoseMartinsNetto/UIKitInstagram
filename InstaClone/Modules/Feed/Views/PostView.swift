@@ -64,11 +64,9 @@ final class PostView: UIView {
         return label
     }()
     
-    @objc var onLike: (() -> Void)?
-    
     private func setupPostImage() {
         addSubview(postImage)
-        postImage.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        postImage.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         postImage.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         postImage.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         postImage.heightAnchor.constraint(equalToConstant: 375).isActive = true
@@ -97,11 +95,10 @@ final class PostView: UIView {
     }
     
     private func setupPostFooter() {
-        let likeButton: UIButton = .iconButton(icon: .iconHeart, iconColor: .lightBlackDarkWhite)
-        likeButton.addTarget(self, action: #selector(getter: onLike), for: .touchUpInside)
-        let commentButton: UIButton = .iconButton(icon: .iconComment, iconColor: .lightBlackDarkWhite)
-        let shareButton: UIButton = .iconButton(icon: .iconShare, iconColor: .lightBlackDarkWhite)
-        let moreButton: UIButton = .iconButton(icon: .iconMore, iconColor: .lightBlackDarkWhite)
+        let likeButton: JMButton = .iconButton(icon: .iconHeart, iconColor: .lightBlackDarkWhite)
+        let commentButton: JMButton = .iconButton(icon: .iconComment, iconColor: .lightBlackDarkWhite)
+        let shareButton: JMButton = .iconButton(icon: .iconShare, iconColor: .lightBlackDarkWhite)
+        let moreButton: JMButton = .iconButton(icon: .iconMore, iconColor: .lightBlackDarkWhite)
         
         let postInfoStack = UIStackView(arrangedSubviews: [commentsNumber, likesNumber])
         postInfoStack.axis = .vertical

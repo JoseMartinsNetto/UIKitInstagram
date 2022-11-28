@@ -7,22 +7,24 @@
 
 import UIKit
 
-enum TabType: Int {
-    case home = 0
-    case search = 1
-    case media = 3
-    case shop = 4
-    case user = 5
-}
+
 
 final class TabbarViewController: UIViewController {
     static let shared = TabbarViewController()
     
-    private let homeButton: UIButton = .iconButton(icon: .iconHome, iconColor: .white, tag: 0)
-    private let searchButton: UIButton = .iconButton(icon: .iconSearch, iconColor: .defaultIconColor, tag: 1)
-    private let mediaButton: UIButton = .iconButton(icon: .iconMedia, iconColor: .defaultIconColor, tag: 2)
-    private let shopButton: UIButton = .iconButton(icon: .iconShop, iconColor: .defaultIconColor, tag: 3)
-    private let userButton: UIButton = .userButton(icon: .postExemple, tag: 4)
+    enum TabType: Int {
+        case home = 0
+        case search = 1
+        case media = 3
+        case shop = 4
+        case user = 5
+    }
+    
+    private let homeButton: JMButton = .iconButton(icon: .iconHome, iconColor: .white, tag: 0)
+    private let searchButton: JMButton = .iconButton(icon: .iconSearch, iconColor: .defaultIconColor, tag: 1)
+    private let mediaButton: JMButton = .iconButton(icon: .iconMedia, iconColor: .defaultIconColor, tag: 2)
+    private let shopButton: JMButton = .iconButton(icon: .iconShop, iconColor: .defaultIconColor, tag: 3)
+    private let userButton: JMButton = .userButton(icon: .postExemple, tag: 4)
     
     private let containerView = UIView(disableAutoResizing: true)
     private let tabView = UIStackView(disableAutoResizing: true)
@@ -42,25 +44,30 @@ final class TabbarViewController: UIViewController {
     private func loadSubcontroller(viewTag: Int = 0) {
         guard let tabType = TabType(rawValue: viewTag) else { return }
         
-        var navController: UIViewController!
+        let navController = UINavigationController(navigationBarClass: FeedNavigationBar.self,
+                                                   toolbarClass: nil)
+        
+        var viewController: UIViewController!
         
         switch tabType {
         case .home:
-            navController = UINavigationController(rootViewController: FeedViewController())
+            viewController = FeedViewController()
             break
         case .search:
-            navController = UINavigationController(rootViewController: FeedViewController())
+            viewController = FeedViewController()
             break
         case .media:
-            navController = UINavigationController(rootViewController: FeedViewController())
+            viewController = FeedViewController()
             break
         case .shop:
-            navController = UINavigationController(rootViewController: FeedViewController())
+            viewController = FeedViewController()
             break
         case .user:
-            navController = UINavigationController(rootViewController: FeedViewController())
+            viewController = FeedViewController()
             break
         }
+        
+        navController.pushViewController(viewController, animated: false)
         
         navController.view.frame = containerView.frame
         
@@ -122,22 +129,18 @@ final class TabbarViewController: UIViewController {
         
         view.layoutIfNeeded()
     }
-    
 }
 
 #if canImport(SwiftUI) && DEBUG
+
 import SwiftUI
+
 struct TabbarPreview_Previews: PreviewProvider {
     static var previews: some View {
         UIViewControllerPreview {
             TabbarViewController()
         }
         .preferredColorScheme(.dark)
-        
-        UIViewControllerPreview {
-            TabbarViewController()
-        }
-        .preferredColorScheme(.light)
     }
 }
 
