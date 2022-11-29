@@ -15,9 +15,9 @@ final class TabbarViewController: UIViewController {
     enum TabType: Int {
         case home = 0
         case search = 1
-        case media = 3
-        case shop = 4
-        case user = 5
+        case media = 2
+        case shop = 3
+        case user = 4
     }
     
     private let homeButton: JMButton = .iconButton(icon: .iconHome, iconColor: .white, tag: 0)
@@ -57,7 +57,7 @@ final class TabbarViewController: UIViewController {
             viewController = FeedViewController()
             break
         case .media:
-            viewController = FeedViewController()
+            viewController = ReelsViewController()
             break
         case .shop:
             viewController = FeedViewController()

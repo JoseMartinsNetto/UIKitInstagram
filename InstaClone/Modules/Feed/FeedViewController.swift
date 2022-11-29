@@ -69,3 +69,16 @@ final class FeedViewController: InstaViewController,
         postsList.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct FeedPreview_Previews: PreviewProvider {
+    static var previews: some View {
+        UIViewControllerPreview {
+            FeedViewController()
+        }
+    }
+}
+
+#endif
