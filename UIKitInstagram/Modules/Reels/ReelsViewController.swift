@@ -7,10 +7,7 @@
 
 import UIKit
 
-final class ReelsViewController: InstaViewController {
-    
-}
-
+final class ReelsViewController: InstaViewController {}
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI

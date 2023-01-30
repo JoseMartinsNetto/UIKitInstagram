@@ -202,6 +202,8 @@
 			dependencies = (
 			);
 			name = UIKitInstagram;
+			packageProductDependencies = (
+			);
 			productName = InstaClone;
 			productReference = 7F0344A329241680006AC84F /* UIKitInstagram.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +232,8 @@
 				Base,
 			);
 			mainGroup = 7F03449A29241680006AC84F;
+			packageReferences = (
+			);
 			productRefGroup = 7F0344A429241680006AC84F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
