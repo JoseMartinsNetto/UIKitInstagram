@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F0344A329241680006AC84F /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0344A329241680006AC84F /* UIKitInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0344A629241680006AC84F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F0344A829241680006AC84F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7F0344AF29241682006AC84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		7F03449A29241680006AC84F = {
 			isa = PBXGroup;
 			children = (
-				7F0344A529241680006AC84F /* InstaClone */,
+				7F0344A529241680006AC84F /* UIKitInstagram */,
 				7F0344A429241680006AC84F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,12 +74,12 @@
 		7F0344A429241680006AC84F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7F0344A329241680006AC84F /* InstaClone.app */,
+				7F0344A329241680006AC84F /* UIKitInstagram.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7F0344A529241680006AC84F /* InstaClone */ = {
+		7F0344A529241680006AC84F /* UIKitInstagram */ = {
 			isa = PBXGroup;
 			children = (
 				7FD1CE2F2931897000CC2B41 /* Core */,
@@ -87,7 +87,7 @@
 				7F55635D29254813009B39FA /* Utilities */,
 				7F21AE75292428C200940EE5 /* Modules */,
 			);
-			path = InstaClone;
+			path = UIKitInstagram;
 			sourceTree = "<group>";
 		};
 		7F0344BA292416F6006AC84F /* Application */ = {
@@ -189,9 +189,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7F0344A229241680006AC84F /* InstaClone */ = {
+		7F0344A229241680006AC84F /* UIKitInstagram */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F0344B729241682006AC84F /* Build configuration list for PBXNativeTarget "InstaClone" */;
+			buildConfigurationList = 7F0344B729241682006AC84F /* Build configuration list for PBXNativeTarget "UIKitInstagram" */;
 			buildPhases = (
 				7F03449F29241680006AC84F /* Sources */,
 				7F0344A029241680006AC84F /* Frameworks */,
@@ -201,9 +201,9 @@
 			);
 			dependencies = (
 			);
-			name = InstaClone;
+			name = UIKitInstagram;
 			productName = InstaClone;
-			productReference = 7F0344A329241680006AC84F /* InstaClone.app */;
+			productReference = 7F0344A329241680006AC84F /* UIKitInstagram.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7F03449E29241680006AC84F /* Build configuration list for PBXProject "InstaClone" */;
+			buildConfigurationList = 7F03449E29241680006AC84F /* Build configuration list for PBXProject "UIKitInstagram" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -234,7 +234,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7F0344A229241680006AC84F /* InstaClone */,
+				7F0344A229241680006AC84F /* UIKitInstagram */,
 			);
 		};
 /* End PBXProject section */
@@ -411,10 +411,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "InstaClone/Application/Development\\ Assets.xcassets InstaClone/Utilities/Previews.swift";
+				DEVELOPMENT_ASSET_PATHS = "UIKitInstagram/Application/Development\\ Assets.xcassets UIKitInstagram/Utilities/Previews.swift";
 				DEVELOPMENT_TEAM = 35YSZ37LA7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = InstaClone/Application/Info.plist;
+				INFOPLIST_FILE = UIKitInstagram/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -440,10 +440,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "InstaClone/Application/Development\\ Assets.xcassets InstaClone/Utilities/Previews.swift";
+				DEVELOPMENT_ASSET_PATHS = "UIKitInstagram/Application/Development\\ Assets.xcassets UIKitInstagram/Utilities/Previews.swift";
 				DEVELOPMENT_TEAM = 35YSZ37LA7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = InstaClone/Application/Info.plist;
+				INFOPLIST_FILE = UIKitInstagram/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -465,7 +465,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7F03449E29241680006AC84F /* Build configuration list for PBXProject "InstaClone" */ = {
+		7F03449E29241680006AC84F /* Build configuration list for PBXProject "UIKitInstagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F0344B529241682006AC84F /* Debug */,
@@ -474,7 +474,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F0344B729241682006AC84F /* Build configuration list for PBXNativeTarget "InstaClone" */ = {
+		7F0344B729241682006AC84F /* Build configuration list for PBXNativeTarget "UIKitInstagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F0344B829241682006AC84F /* Debug */,
